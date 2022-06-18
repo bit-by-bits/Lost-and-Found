@@ -1,0 +1,73 @@
+.sign-in {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.select span {
+  border: 2px solid purple;
+  width: 50%;
+  padding: 2% 0;
+}
+
+.box {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid purple;
+  width: 25%;
+  /* height: 50%; */
+  padding: 5%;
+  border-radius: 20px;
+  background-color: #c6a3c669;
+}
+
+.inactive-option {
+  background-color: purple;
+}
+
+.inactive-option-link {
+  color: white;
+}
+
+.form-ele {
+  display: flex;
+  flex-direction: column;
+  margin: 7% 0;
+}
+
+label {
+  text-align: left;
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  height: 2rem;
+  outline: none;
+  background-color: #efd9ef69;
+}
+
+input:focus-within {
+  border-bottom: 2px solid purple;
+}
+
+.btn {
+  border: 2px solid purple;
+  margin: 1rem 0;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: purple;
+  cursor: pointer;
+}
