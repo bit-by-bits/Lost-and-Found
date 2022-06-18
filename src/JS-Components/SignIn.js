@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import GoogleAuth from "../GoogleAuth.js";
-import "./SignIn.css";
+import GoogleAuth from "./GoogleAuth";
+import "../CSS-Components/SignIn.css";
 
 function SignIn(props) {
   return (
-    <div className="sign-in">
+    <div className="sign_in">
       <div className="box">
         <div className="select">
           <span className={props.todo === "SIGN IN" ? "inactive-option" : ""}>
             <Link
               className={props.todo === "SIGN IN" ? "inactive-option-link" : ""}
-              to="/"
+              to="/signin"
             >
               SIGN IN
             </Link>
