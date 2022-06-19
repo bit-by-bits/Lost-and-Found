@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GoogleAuth from "./GoogleAuth";
-import "../CSS-Components/SignIn.css";
+import "../CSS-Components/SignUp.css";
 
-function SignIn(props) {
+function SignUp(props) {
   return (
     <div className="sign_in">
       <div className="box">
@@ -58,4 +58,4 @@ function SignIn(props) {
   );
 }
 
-export default SignIn;
+export default SignUp;

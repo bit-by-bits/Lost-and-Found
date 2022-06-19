@@ -3,11 +3,9 @@ import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
 
 function GoogleAuth() {
-  // regex expression to be checked
-  const check = /@pilani.bits-pilani.ac.in$/;
-
-  // initializing useNavigate
   const move = useNavigate();
+  const check = /@pilani.bits-pilani.ac.in$/; // regex expression to be checked
+  const user_data = React.createContext(); // create a context API object
 
   function manageResponse(res) {
     // 'res' is response sent by google, we use jwt_decode to decode its credentials into data we want, and then use its properties like email (to verify bits login) or user's picture to be displayed
