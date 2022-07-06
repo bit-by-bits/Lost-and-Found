@@ -1,7 +1,88 @@
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    width: 100vw;
-    padding: 1rem;
+/* navbar main div */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+  border: 2px solid black;
+  justify-content: space-around;
+  /* position: fixed; */
+}
+
+.navbar > * {
+  margin: auto 0;
+}
+
+/* logo */
+.logo {
+  height: 100%;
+}
+
+.logo img {
+  height: 100%;
+}
+
+/* switch options - cat, lost, found */
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+  align-items: center;
+}
+
+/* links */
+/* .nav-link{
+    text-decoration: none;
+    color: black;
+    margin: auto 0;
+} */
+
+.link-div,
+.active-link {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.link-div {
+  color: orange;
+}
+
+.link-div:hover {
+  background-color: #c8c8c833;
+  cursor: pointer;
+}
+
+/* applies when link is active */
+.active-link {
+  background-color: orange;
+  color: white;
+}
+
+/* search bar */
+.search {
+  margin: auto 0;
+}
+
+.search_bar {
+  width: 90%;
+  border: none;
+  border-radius: 100px;
+  padding: 1rem;
+}
+
+.search_bar:focus-within {
+  border: none;
+}
+
+/* icons - search, user */
+.navbar .icon {
+  /* height: 40%; */
+  margin: auto;
+}
+
+/* signup btn */
+#signup {
+  background-color: orange;
+  color: white;
 }

@@ -1,13 +1,13 @@
-import React from 'react'
-import Navbar from './JS-Components/Navbar'
+import React from "react";
+import Navbar from "./JS-Components/Navbar";
 
 function Main() {
-  console.log()
+  console.log();
   return (
-    <div className='main'>
-    <Navbar />
+    <div className="main">
+      <Navbar />
     </div>
-  )
+  );
 }
 
-export default Main
+export default Main;

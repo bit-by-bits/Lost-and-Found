@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Developers() {
-  return (
-    <div>Developers</div>
-  )
+  return <div>Developers</div>;
 }
 
-export default Developers
+export default Developers;

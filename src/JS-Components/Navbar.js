@@ -3,40 +3,52 @@ import "../CSS-Components/Navbar.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
-  const move = useNavigate();
-
-  function Move_Category() {
-    move("/categories", { replace: true });
-  }
-
-  function Move_Item() {
-    move("/newitem", { replace: true });
-  }
-
-  function Move_Signup() {
-    move("/signup", { replace: true });
-  }
-
-  function Move_Profile() {
-    move("/profile", { replace: true });
-  }
-
   return (
     <div className="navbar">
-      <img src="" alt="Lost and Found" />
-      <div onClick={Move_Category}>Categories</div>
-      <div onClick={Move_Item}>Add Item</div>
-      <div></div>
-      <div className="search">
+      {/* temporary logo - TO BE CHANGED */}
+      {/* leftmost div - containing logo only */}
+      <div className="logo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShV-TuqQlHIuTrTnsPbti-zjZ2oh0TDAEN8Q&usqp=CAU"
+          alt=""
+        />
+      </div>
+
+      {/* switch b/w pages */}
+      <div className="nav-items">
+        <NavLink
+          className={({ isActive }) => (isActive ? "active-link" : "link-div")}
+          to="categories"
+        >
+          Categories
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active-link" : "link-div")}
+          to="lost"
+        >
+          Lost
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active-link" : "link-div")}
+          to="found"
+        >
+          Found
+        </NavLink>
+      </div>
+
+      {/* search bar */}
+      <div className="search" id="search">
         <input type="text" className="search_bar" />
-        <FontAwesomeIcon icon={faSearch} />
+        <FontAwesomeIcon className="icon" icon={faSearch} />
       </div>
-      <div className="user">
-        <div className="user_true" onClick={Move_Signup}>Sign Up</div>
-        <div className="user_false" onClick={Move_Profile}></div>
-      </div>
+
+      {/* rightmost div - USER */}
+      <Link className="link-div" id="signup" to="signup" todo="SIGN UP">
+        SIGN UP
+      </Link>
     </div>
   );
 }
